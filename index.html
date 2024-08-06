@@ -3,14 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Funky Note Project - Version 3</title>
+    <title>Funky Note Project - Enhanced Version</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="app">
         <h1>Funky Note Project</h1>
         <input type="text" id="noteInput" placeholder="Enter your funky note">
+        <select id="noteCategory">
+            <option value="General">General</option>
+            <option value="Work">Work</option>
+            <option value="Personal">Personal</option>
+        </select>
+        <select id="notePriority">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
         <button id="addNoteButton">Add Note</button>
+        <input type="text" id="searchInput" placeholder="Search notes...">
         <ul id="notesList"></ul>
     </div>
     <script src="script.js"></script>

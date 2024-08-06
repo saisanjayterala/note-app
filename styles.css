@@ -4,7 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #e0f7fa;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
     margin: 0;
 }
 
@@ -13,27 +13,49 @@ body {
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 2px 20px rgba(0,0,0,0.2);
-    width: 400px;
+    width: 450px;
     text-align: center;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 #app:hover {
     transform: scale(1.05);
+    box-shadow: 0 4px 30px rgba(0,0,0,0.3);
 }
 
-#noteInput {
+h1 {
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+#noteInput, #searchInput {
     width: calc(100% - 20px);
     padding: 10px;
     margin-bottom: 15px;
     border: 2px solid #007bff;
     border-radius: 10px;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-#noteInput:focus {
+#noteInput:focus, #searchInput:focus {
     border-color: #0056b3;
     outline: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#noteCategory, #notePriority {
+    width: calc(50% - 20px);
+    padding: 10px;
+    margin: 5px 10px 15px 10px;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#noteCategory:focus, #notePriority:focus {
+    border-color: #0056b3;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 button {
@@ -43,11 +65,12 @@ button {
     color: white;
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 button:hover {
     background-color: #0056b3;
+    transform: translateY(-2px);
 }
 
 ul {
@@ -64,13 +87,14 @@ li {
     justify-content: space-between;
     align-items: center;
     border: 2px solid #eee;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 li:hover {
     background-color: #f0f0f0;
     transform: scale(1.02);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
 
 li button {
@@ -95,4 +119,15 @@ li .editButton {
 
 li .editButton:hover {
     background-color: #e0a800;
+}
+
+.note-category {
+    font-size: 0.8em;
+    color: #666;
+    margin-right: 10px;
+}
+
+.note-priority {
+    font-size: 0.8em;
+    color: #666;
 }
